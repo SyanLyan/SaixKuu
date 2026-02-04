@@ -73,7 +73,6 @@ export default function GalleryClient({ initialCollections }: GalleryClientProps
   const [activeCollection, setActiveCollection] = useState<string | null>(null);
   const [secretUnlocked, setSecretUnlocked] = useState(false);
 
-  // Favorites State
   const [favorites, setFavorites] = useState<string[]>([]);
 
   // Load favorites on mount
