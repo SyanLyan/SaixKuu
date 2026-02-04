@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sai X Kuu - A Retrofuturistic Love Journal
 
-## Getting Started
+Welcome to your private digital love journal. This project is a Next.js application designed with a Retrofuturism/Cyberpunk-lite aesthetic.
 
-First, run the development server:
+## 🚀 Getting Started
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1.  Navigate to the project directory:
+    ```bash
+    cd sai-x-kuu
+    ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2.  Run the development server:
+    ```bash
+    npm run dev
+    ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3.  Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Project Structure
 
-## Learn More
+-   **`app/page.tsx`**: The Home page with the "Days of Us" counter and rotating quotes.
+-   **`app/timeline/page.tsx`**: A vertical timeline of your relationship events.
+-   **`app/gallery/page.tsx`**: A password-protected gallery (Default password is "love").
+-   **`app/moments/page.tsx`**: Cards for special milestones like birthdays and anniversaries.
+-   **`components/Navigation.tsx`**: The floating navigation menu.
+-   **`app/globals.css`**: Contains the Retro-futurism styles (Grid, Scanlines, Glow).
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠 Customizing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   **Start Date**: Update the date in `app/page.tsx`.
+-   **Images**: Place your photos in the `public/` folder and update `src` paths in `timeline` and `gallery` pages.
+-   **Password**: Change the password logic in `app/gallery/page.tsx`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🎨 Theme
 
-## Deploy on Vercel
+The theme uses **Tailwind CSS v4** with custom CSS variables for the retro grid and scanlines. You can adjust colors in `app/globals.css`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Enjoy building your memory gallery!
