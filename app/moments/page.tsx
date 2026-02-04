@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import exifr from "exifr";
+import { withBasePath } from "@/lib/utils";
 import MomentsClient, { MomentItem } from "./moments-client";
 
 const imageExtensions = new Set([".jpg", ".jpeg", ".png", ".webp", ".gif"]);
@@ -65,7 +66,7 @@ async function buildDynamicMoments(): Promise<MomentItem[]> {
         date: "",
         location: "Memory Lane",
         type: "image" as const,
-        src: `/src/assets/together/img/${file}`,
+        src: withBasePath(`/src/assets/together/img/${file}`),
         description: "A frozen fragment of time, kept safe forever.",
         tags: ["Memory", "Photo"],
         sortTime: time,
@@ -85,7 +86,7 @@ async function buildDynamicMoments(): Promise<MomentItem[]> {
       date: "",
       location: "Memory Lane",
       type: "video",
-      src: `/src/assets/together/video/${file}`,
+      src: withBasePath(`/src/assets/together/video/${file}`),
       description: "A moving memory, preserved forever.",
       tags: ["Memory", "Video"],
       sortTime: time,
