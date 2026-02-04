@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { withBasePath } from "@/lib/utils";
 import GalleryClient, { type Collection } from './gallery-client';
 
 // Define the metadata for your collections.
@@ -58,7 +59,7 @@ function getMediaForCollection(folderName: string, isVideo = false): string[] {
         return files
             .filter(file => regex.test(file))
             .map(file => {
-                 return `/${relativePath.replace(/\\/g, '/')}/${file}`;
+                 return withBasePath(`/${relativePath.replace(/\\/g, '/')}/${file}`);
             });
     } catch (error) {
         console.error(`Error reading directory ${fullPath}:`, error);

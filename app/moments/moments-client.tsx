@@ -44,7 +44,7 @@ export default function MomentsClient({ moments }: { moments: MomentItem[] }) {
             No Moments Yet
           </h1>
           <p className="text-gray-600 dark:text-gray-400 font-mono text-xs tracking-[0.2em] uppercase">
-            Add images or videos to /src/assets/together
+            Add images or videos to /assets/together
           </p>
         </div>
       </div>
